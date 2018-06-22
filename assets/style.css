@@ -11,11 +11,24 @@ body {
   grid-template-rows: 10rem 25rem 2rem 1fr 3rem; 
   grid-template-columns: 100%;
   grid-template-areas:  
-    "header header header" 
-    "logo logo logo" 
-    "contact contact contact" 
-    "spacer spacer spacer" 
-    "footer footer footer";  
+    "header"
+    "logo"
+    "contact"
+    "spacer"
+    "footer";
+}
+
+body.textpage {
+  text-align: left;
+
+  grid-template-rows: 0rem 25rem 1fr 5rem 3rem;
+  grid-template-columns: 100%;
+  grid-template-areas:  
+    "header"
+    "logo"
+    "content"
+    "spacer"
+    "footer";
 }
 
 body, 
@@ -32,27 +45,38 @@ header{
   grid-area: header;
 } 
 
-.brand--logo {
+.brand-logo {
   grid-area: logo;
 }
 
-.brand--logo img {
-  height: 100%;
+.brand-logo img {
+  max-height: 20rem;
   max-width: 50%;
   margin: 0 auto;
   display: block;
 }
 
-.brand--contact {
+.brand-logo a {
+  display: block;
+}
+
+.brand-contact {
   font-size: 1.25rem;
   grid-area: contact;
+}
+
+.brand-content {
+  width: 60%;
+  margin: 0 auto;
+  grid-area: content;
 }
 
 .spacer {
   grid-area: spacer;
 }
 
-.legal {
+.legallinks {
+  text-align: center;
   font-size: 1.25rem;
   grid-area: footer;
 }
