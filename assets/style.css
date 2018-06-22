@@ -1,0 +1,58 @@
+body {
+  background: #191919;
+
+  font-family: Roboto;
+  font-weight: 300;
+
+  text-align: center;
+
+  height:100vh; 
+  display: grid; 
+  grid-template-rows: 10rem 25rem 2rem 1fr 3rem; 
+  grid-template-columns: 100%;
+  grid-template-areas:  
+    "header header header" 
+    "logo logo logo" 
+    "contact contact contact" 
+    "spacer spacer spacer" 
+    "footer footer footer";  
+}
+
+body, 
+a {
+  color: #E6E6E6;
+}
+
+a:hover,
+a:active {
+  color: #A6A6A6;
+}
+
+header{
+  grid-area: header;
+} 
+
+.brand--logo {
+  grid-area: logo;
+}
+
+.brand--logo img {
+  height: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.brand--contact {
+  font-size: 1.25rem;
+  grid-area: contact;
+}
+
+.spacer {
+  grid-area: spacer;
+}
+
+.legal {
+  font-size: 1.25rem;
+  grid-area: footer;
+}
